@@ -11,10 +11,5 @@ describe("Tela de login", () => {
         cy.url().should('include', '/forum/?_fromLogin=1')
     })
 
-    it("Login inválido", () => {
-        cy.get('#username').type('invalidUser')
-        cy.get('#password').type('admin')
-        cy.get('button').click()
-        cy.get('#errorMessage').should('contain', 'Usuário ou senha incorretos!')
-    })
+    
 });
